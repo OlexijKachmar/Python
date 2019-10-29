@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article List</title>
+</head>
+<body>
+    <h1>Article List:</h1>
+    <div class="articles">
+        {% for article in articles %}
+            <div class = "article">
+                {% if article.checked %}
+                <h2><a href = "#">{{article.title}}</a></h2>
+                <p>{{article.text}}</p>
+                <p>{{article.author}}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
