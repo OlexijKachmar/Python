@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+    <h2>Info about user</h2>
+        <div class="user">
+            <p><a href = "#">{{user.username}}</a></p>
+            <p>Articles of this user : </p>
+            {% for article in articles %}
+                {% if article.author.id == user.id %}
+                <p>{{ article.title }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+</body>
+</html>
